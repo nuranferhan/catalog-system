@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.productcatalogsystem.Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutY="23.2" prefHeight="622.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+               <left>
+                  <AnchorPane prefHeight="602.0" prefWidth="291.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-3.2" layoutY="-12.8" prefHeight="600.0" prefWidth="334.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="-13.0">
+                           <children>
+                              <ImageView fitHeight="600.0" fitWidth="377.0" layoutX="-33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../bg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="132.0" fitWidth="122.0" layoutX="108.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../logo.png" />
+                                 </image>
+                                 <effect>
+                                    <Reflection fraction="0.11" topOpacity="0.25" />
+                                 </effect>
+                              </ImageView>
+                              <Label layoutX="122.0" layoutY="200.0" text="TecnoMark">
+                                 <font><Font name="Tahoma Bold" size="17.0" /></font>
+                              </Label>
+                              <Label layoutX="119.0" layoutY="228.0" text="Ürün Kataloğu" textAlignment="CENTER">
+                                 <font><Font name="Tahoma" size="16.0" /></font>
+                              </Label>
+                              <Label layoutX="129.0" layoutY="264.0" text="Hoşgeldiniz!" textAlignment="CENTER">
+                                 <font><Font name="Tahoma" size="15.0" /></font>
+                              </Label>
+                              <Line endX="100.0" layoutX="168.0" layoutY="300.0" startX="-100.0" />
+                              <Label layoutX="15.0" layoutY="376.0" text="Kategoriler">
+                                 <font><Font name="Tahoma Bold" size="13.0" /></font>
+                              </Label>
+                              <ComboBox fx:id="kategoriComboBox" layoutX="142.0" layoutY="371.0" prefHeight="26.0" prefWidth="155.0" promptText="Tümü" />
+                              <Label layoutX="15.0" layoutY="448.0" text="Sırala">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="kategoriComboBox2" layoutX="142.0" layoutY="443.0" prefHeight="26.0" prefWidth="155.0" promptText="Seçiniz" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="610.0" prefWidth="801.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="609.0" fitWidth="770.0" layoutX="-2.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../white.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="586.0" fitWidth="757.0" layoutX="6.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../table.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane layoutX="37.0" layoutY="21.0" prefHeight="336.0" prefWidth="694.0">
+                           <children>
+                              <TableView fx:id="tableView" layoutY="43.0" prefHeight="280.0" prefWidth="694.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColumn" prefWidth="41.6" text="ID" />
+                                    <TableColumn fx:id="nameColumn" prefWidth="144.0" text="Ürün Adı" />
+                                    <TableColumn fx:id="brandColumn" prefWidth="104.8" text="Marka" />
+                                    <TableColumn fx:id="categoryColumn" prefWidth="120.0" text="Kategori" />
+                                    <TableColumn fx:id="descriptionColumn" prefWidth="124.0" text="Açıklama" />
+                                    <TableColumn fx:id="priceColumn" prefWidth="85.6" text="Fiyat" />
+                                    <TableColumn fx:id="stockColumn" prefWidth="73.6" text="Stok" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchField" layoutY="-1.0" prefHeight="30.0" prefWidth="277.0" promptText="Ara">
+                                 <effect>
+                                    <ColorAdjust contrast="-0.11" />
+                                 </effect></TextField>
+                              <Line endX="629.0" layoutX="86.0" layoutY="337.0" startX="-107.0" stroke="#bfbcbc" strokeWidth="1.5" />
+                              <Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleGeriAl" prefHeight="26.0" prefWidth="62.0" text="Geri Al" />
+                              <Button fx:id="sonEklenenlerButton" layoutX="594.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleSonEklenenler" prefHeight="26.0" prefWidth="100.0" text="Son Eklenenler">
+                                 <effect>
+                                    <ColorAdjust brightness="-0.34" contrast="0.45" hue="0.34" saturation="0.35" />
+                                 </effect></Button>
+                              <Button fx:id="searchButtoon" layoutX="306.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleUrunAra" text="Ara" />
+                           </children>
+                        </AnchorPane>
+                        <!-- Form alanları -->
+                        <Label layoutX="40.0" layoutY="381.0" text="Ürün ID:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="urunIdField" layoutX="109.0" layoutY="377.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect></TextField>
+
+                        <Label layoutX="37.0" layoutY="427.0" text="Ürün Adı:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="urunAdiField" layoutX="109.0" layoutY="423.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect></TextField>
+
+                        <Label layoutX="52.0" layoutY="475.0" text="Marka:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="markaField" layoutX="109.0" layoutY="471.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect></TextField>
+
+                        <Label layoutX="38.0" layoutY="522.0" text="Kategori:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <ComboBox fx:id="kategoriComboBox1" layoutX="109.0" layoutY="519.0" prefWidth="150.0" promptText="Seçiniz" />
+
+                        <Label layoutX="321.0" layoutY="379.0" text="Açıklama:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="aciklamaField" layoutX="396.0" layoutY="376.0" prefHeight="26.0" prefWidth="136.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect></TextField>
+
+                        <Label layoutX="321.0" layoutY="424.0" text="Fiyat:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="fiyatField" layoutX="396.0" layoutY="421.0" prefHeight="26.0" prefWidth="61.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect></TextField>
+                        <Label layoutX="466.0" layoutY="422.0" text="₺" textFill="#b1acac"><font><Font name="Tahoma" size="17.0" /></font></Label>
+
+                        <Label layoutX="321.0" layoutY="473.0" text="Stok:"><font><Font name="Tahoma" size="14.0" /></font></Label>
+                        <TextField fx:id="stockField" layoutX="396.0" layoutY="469.0" prefHeight="26.0" prefWidth="61.0">
+                           <effect>
+                              <ColorAdjust contrast="-0.11" />
+                           </effect>
+                        </TextField>
+
+                        <AnchorPane layoutX="590.0" layoutY="371.0" prefHeight="139.0" prefWidth="130.0">
+                           <children>
+                              <ImageView fitHeight="151.0" fitWidth="130.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image><Image url="@../../../frame.png" /></image>
+                              </ImageView>
+                              <ImageView fx:id="productImageView" fitHeight="118.0" fitWidth="115.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="4.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleSecButton" prefHeight="26.0" prefWidth="121.0" text="Seç" textFill="RED" />
+                           </children>
+                        </AnchorPane>
+
+                        <Button layoutX="356.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleSilButton" prefHeight="31.0" prefWidth="77.0" text="Sil">
+                           <effect>
+                              <ColorAdjust brightness="0.2" contrast="0.03" hue="-0.02" saturation="0.23" />
+                           </effect>
+                        </Button>
+
+                        <Button layoutX="458.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleEkleButton" prefHeight="31.0" prefWidth="77.0" text="Ekle">
+                           <effect>
+                              <ColorAdjust brightness="0.16" contrast="0.03" hue="0.69" saturation="0.33" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

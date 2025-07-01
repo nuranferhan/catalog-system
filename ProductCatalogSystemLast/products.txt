@@ -1,0 +1,7 @@
+453,Gaming Kulaklık,Endorfy,Aksesuar,Kaliteli,1799.0,165,file:/C:/Users/Lenovo/Desktop/ProductCatalogSystemLast/katalog/acc1.jpg
+344,Vivobook PC,Asus,Bilgisayar,Güzel,17499.0,500,file:/C:/Users/Lenovo/Desktop/ProductCatalogSystemLast/katalog/pc1.png
+546,Honor Pad Tablet,Android ,Tablet,Kaliteli,4999.0,400,file:/C:/Users/Lenovo/Desktop/ProductCatalogSystemLast/katalog/tablet1.png
+657,Daily Collection Mikser,Philips,Ev Aletleri,Turbo ayarlı,899.0,780,file:/C:/Users/Lenovo/Desktop/ProductCatalogSystemLast/katalog/home1.png
+457,Galaxy A06 Telefon,Samsung ,Telefon,Siyah ,6399.0,700,file:/C:/Users/Lenovo/Desktop/ProductCatalogSystemLast/katalog/tel1.png
+111,D16 Laptop,Huawei,Bilgisayar,çanta hediyeli,30000.0,500,null
+222,Airpods 2. nesil,Apple,Aksesuar,Pahalı ,6000.0,200,null
